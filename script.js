@@ -77,7 +77,7 @@ $(document).ready(function(){
 
 
     {
-      ques: "Question: what does .val() method do?",
+      ques: "Question: what does .val( ) method do?",
       ans: "Answer: It's used to get values of form elements like 'input', 'select', and 'textarea'."
     },
 

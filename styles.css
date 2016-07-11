@@ -5,26 +5,51 @@ font-family: 'Coming Soon', cursive;
 background-color: ;
 }
 
+#card-1{
+  position: relative;
+  margin: auto;
+  display: block;
+}
+
 .card {
   text-align: center;
   font-family: 'Coming Soon', cursive;
-  width: 600px;
-  height: 400px;
+  width: 300px;
+  height: 200px;
   margin: 20px;
+  position: relative;
+  margin: auto;
+  display: block;
 }
 .front, .back, .other-front, .other-back {
   text-align: center;
   font-family: 'Coming Soon', cursive;
   border: 2px gray solid;
   padding: 10px;
+  position: relative;
+  margin: auto;
+  display: block;
 }
 .front, .other-front {
   text-align: center;
   font-family: 'Coming Soon', cursive;
   background-color: yellow;
+  position: relative;
+  margin: auto;
+  display: block;
 }
 .back, .other-back {
   text-align: center;
   font-family: 'Coming Soon', cursive;
   background-color: pink;
+  position: relative;
+  margin: auto;
+  display: block;
+}
+
+button {
+  position: relative;
+  margin: auto 480px;
+  display: block;
+
 }
