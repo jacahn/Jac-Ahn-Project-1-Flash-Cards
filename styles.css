@@ -14,7 +14,8 @@ background-color: ;
 .card {
   text-align: center;
   font-family: 'Coming Soon', cursive;
-  width: 300px;
+  font-size: 30px;
+  width: 400px;
   height: 200px;
   margin: 20px;
   position: relative;
@@ -49,7 +50,7 @@ background-color: ;
 
 button {
   position: relative;
-  margin: auto 480px;
+  margin: 200px 480px;
   display: block;
 
 }
