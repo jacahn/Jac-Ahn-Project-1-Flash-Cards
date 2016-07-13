@@ -50,7 +50,12 @@ background-color: ;
 
 button {
   position: relative;
-  margin: 200px 480px;
+
   display: block;
+  text-align:center;
+  position: relative;
+  margin: 200px auto;
+  display: block;
+
 
 }
