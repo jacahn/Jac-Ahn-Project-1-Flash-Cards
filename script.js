@@ -5,6 +5,7 @@ $(document).ready(function(){
   // Creates a var to catch array of checked index cards
   var culledIndexCards = []
 
+  // JQuery plug-in for flip animation
   $(function(){
     $("#card-1").flip({
       axis: "y", // y or x
@@ -16,6 +17,7 @@ $(document).ready(function(){
       autoSize: false
     });
 
+  //Associative array of all questions
   var indexCards = [
     {
       ques: "Question 1: What are two ways to create an object?",
@@ -60,155 +62,34 @@ $(document).ready(function(){
     }
   ]
 
-    //click event: class of button clicked, function called
-    //  var checkboxy = $("<input type='checkbox' id='checkboxy'></input>")
+    //click event: button clicked, function called
     $("button").on("click", function(){
       //changes html of front and back of card
-
-
-
-
       $(".other-front").html(indexCards[clickCounter % indexCards.length].ques);
       $(".other-back").html(indexCards[clickCounter % indexCards.length].ans);
       $('.other-front').prepend('<input type="checkbox" name="myCheckbox" id="checkboxCheck"/>');
 
-
-
-
-
-
-
       clickCounter++;
 
+      // When clickCounter reaches the final card, replace indexCards with
+      // culledIndexCards array, and show only the checked question.
       if(clickCounter===indexCards.length){
         indexCards = culledIndexCards
         clickCounter=0
       }
-/*
-      //click event: class of button clicked, function called
-      //  var checkboxy = $("<input type='checkbox' id='checkboxy'></input>")
-      $("button").on("click", function(){
-        //changes html of front and back of card
 
-
-
-
-        $(".other-front").html(culledIndexCards[clickCounter % culledIndexCards.length].ques);
-        $(".other-back").html(culledIndexCards[clickCounter % culledIndexCards.length].ans);
-        $('.other-front').prepend('<input type="checkbox" name="myCheckbox" id="checkboxCheck"/>');
-      });
-*/
-
-
-
-
-
-
-
+      // Click event for checking the box:
       $('input:checkbox').on('change', function(){
-
-        console.log("Hey wassup");
-
-
         // Creates a for loop to go thru list of questions and put them in an array.
 //          for(var i=0; i<indexCards.length; i++){
+            // If checkbox is checked, put that ques/ans in culledIndexCards array
             if($(this).is(':checked')){
-//          if (indexCards[i].show===true){
-
             culledIndexCards.push(indexCards[clickCounter-1])
             console.log("putting in culled Index Cards")
             }
 //          }
         })
-
       })
-
-
       indexCards[0]
     })
   })
-
-
-
-
-
-
-
-  //show if favorite
-
-  //else don't show
-
-//  function isItChecked(){
-//    console.log("shows checked")
-//    return ($('input.checkbox').is(':checked'))
-//  }
-
-
-
-
-//})
-
-
-
-
-//  SECOND CARD DELETED
-//    $("#card-2").flip({
-//      axis: "x",
-//      reverse: true,
-//      trigger: "click"
-//    });
-// });
-
-//  ATTEMPTS AT CHECKBOX FUNCTIONS
-//    if ($('input.checkbox').is(':checked')) {
-//      console.log("shows checked")
-//    if(document.getElementById("testName").checked) {
-//      document.getElementById('testNameShown').disabled = true
-
-
-/*
-checkboxy.click(function(){
-if (this.checked) {
-var checkedArray = new Array();
-
-//        $("input:checkbox[name=type]:checked").each(function() {
-$("checkboxy:checked").each(function(){
-checkedArray.push($(this).val());
-});
-alternateCards(selected);
-console.log("checked")
-}
-})
-*/
-
-
-
-
-//change html of front and back of card with random choice of question among the array
-
-//  var quesArray=[quesOne, quesTwo];
-//Returns a random number between 0-quesArray.length
-//  var randomNum = function getRandomInt() {
-//    return Math.floor(Math.random() * indexCards.length);
-//    console.log("function getRandomInt is working")
-//  }
-
-/*
-if(randomNum===0){
-$("button").on("click", function(){
-//changes html of front and back of card
-$(".other-front").html(quesOne.ques);
-$(".other-back").html(quesOne.ans);
-getRandomInt();
-console.log("Ques 1")
-})
-} else if (randomNum ===1){
-$("button").on("click", function(){
-//changes html of front and back of card
-$(".other-front").html(quesTwo.ques);
-$(".other-back").html(quesTwo.ans);
-getRandomInt();
-console.log("Ques 2")
-})
-}
-*/
