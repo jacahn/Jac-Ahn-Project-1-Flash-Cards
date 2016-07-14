@@ -12,17 +12,13 @@ Wrangled with the script. Made a click event for the "Next question" button, so 
 Learned about a click counter to cycle between the arrays. Added a checkbox so the user could click it to go through those questions again. Made an event listener for the checkbox. Wrote an if statement so the checked questions would be put in a new culled array. The checked questions would be presented again.
 
 // INSTALLATION INSTRUCTIONS
-JQuery flip plugin
+JQuery flip plugin: https://github.com/nnattawat/flip
 
 // UNSOLVED PROBS
-1. Randomized questions-attempted to code this using Math.random()
-2. Reseting the game. I didn't have 
+1. Randomized questions-attempted to code this using Math.random().
+2. Reseting the game. I need to do a reset button.
 
 // USER STORIES
-As a user, I want to update my status, so that my friends and family can see what I'm thinking or doing.
-Or this format...
-
-As a <role>, I want to <goal>, so that <reason>
 As a student, I want to study javascript to make websites.
 As a student, I want to study javascript to get a job as a web developer.
 As a software developer, I want to learn javascript to learn a new skill.
