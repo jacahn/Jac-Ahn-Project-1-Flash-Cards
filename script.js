@@ -1,10 +1,12 @@
 $(document).ready(function(){
+  // take this log out when you're in production code
   console.log("I'm ready")
 
   var clickCounter = 0;
   // Creates a var to catch array of checked index cards
   var culledIndexCards = []
 
+  // :+1:
   // JQuery plug-in for flip animation
   $(function(){
     $("#card-1").flip({
@@ -17,6 +19,7 @@ $(document).ready(function(){
       autoSize: false
     });
 
+// i would recommend putting your data in a separate file, currently this giant array breaks up your code and makes it harder to read.
   //Associative array of all questions
   var indexCards = [
     {
@@ -61,10 +64,11 @@ $(document).ready(function(){
       show: true
     }
   ]
-
+// :+1:
     //click event: button clicked, function called
     $("button").on("click", function(){
       //changes html of front and back of card
+      // why not use just click counter?
       $(".other-front").html(indexCards[clickCounter % indexCards.length].ques);
       $(".other-back").html(indexCards[clickCounter % indexCards.length].ans);
       $('.other-front').prepend('<input type="checkbox" name="myCheckbox" id="checkboxCheck"/>');
@@ -79,10 +83,12 @@ $(document).ready(function(){
       }
 
       // Click event for checking the box:
+      //:+1:
       $('input:checkbox').on('change', function(){
         // Creates a for loop to go thru list of questions and put them in an array.
 //          for(var i=0; i<indexCards.length; i++){
             // If checkbox is checked, put that ques/ans in culledIndexCards array
+            // watch the indentation here. the if condition itself should be a tab to the left and the code block should be nested in the if
             if($(this).is(':checked')){
             culledIndexCards.push(indexCards[clickCounter-1])
             console.log("putting in culled Index Cards")
@@ -90,6 +96,7 @@ $(document).ready(function(){
 //          }
         })
       })
+      // what's this line of code doing?
       indexCards[0]
     })
   })
