@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles.css">
+    <!-- you've linked jquery twice, additionally the latter is a lower version # so it might cause issues. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -19,7 +20,9 @@
     <h1>Index Cards for Javascript</h1>
     <div id="card-1" class="card">
 
+<!-- interesting class name, what does the word other signify? -->
       <div class="other-front">
+<!-- Generally, you'll want to take out any commented code for production -->
 <!--        <input type="checkbox" id="checkboxy"></input>-->
 <!--            <input id='testName' type='checkbox' value='0' name='testName' class='checkboxCheck'> -->
 <!--            <input id='testNameShown' type='shown' value='1' name='testName' class='checkboxCheck'>
